@@ -58,62 +58,16 @@
             </tr>
             </thead>
             <tbody>
+            {% for ord in all_orders %}
             <tr>
-                <td>1</td>
-                <td>Визитка 1</td>
-                <td>100</td>
-                <td>3000</td>
+                <td>{{ ord.id }}</td>
+                <td>{{ ord.order_temp }}</td>
+                <td>{{ ord.tirag }}</td>
+                <td>{{ ord.total_price }}</td>
 
             </tr>
-            <tr>
-                <td>1</td>
-                <td>Визитка 1</td>
-                <td>100</td>
-                <td>3000</td>
+            {% endfor %}
 
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Визитка 1</td>
-                <td>100</td>
-                <td>3000</td>
-
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Визитка 1</td>
-                <td>100</td>
-                <td>3000</td>
-
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Визитка 1</td>
-                <td>100</td>
-                <td>3000</td>
-
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Визитка 1</td>
-                <td>100</td>
-                <td>3000</td>
-
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Визитка 1</td>
-                <td>100</td>
-                <td>3000</td>
-
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Визитка 1</td>
-                <td>100</td>
-                <td>3000</td>
-
-            </tr>
 
             </tbody>
         </table>

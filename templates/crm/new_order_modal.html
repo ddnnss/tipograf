@@ -10,12 +10,17 @@
                           </button>
                         </div>
                         <div class="modal-body">
-                            {{ new_order_form.as_p }}
+                            {{  new_order_form.errors }}
+                            <form method="post">{% csrf_token %}
+                                {{ new_order_form.as_p }}
+                              <button type="submit" class="btn btn-primary">Сохранить</button>
+                            </form>
+
 
                         </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">Отмена</button>
+
                         </div>
                       </div>
     </div>
