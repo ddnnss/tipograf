@@ -6,7 +6,7 @@ from django import forms
 class NewOrderForm(ModelForm):
     class Meta:
         model = Order
-        fields = ['order_temp','tirag','total_price']
+        fields = ['order_temp', 'tirag', 'total_price']
 
 
         widgets = {
