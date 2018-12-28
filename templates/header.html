@@ -1,0 +1,57 @@
+{% load static %}
+<nav class="navbar navbar-expand-md  navbar-static ms-navbar ms-navbar-primary navbar-mode">
+    <div class="container container-full">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+                <!-- <img src="assets/img/demo/logo-navbar.png" alt=""> -->
+                <span class="ms-logo ms-logo-sm">Т</span>
+                <span class="ms-title">ТИПО
+                <strong>ГРАФИКА</strong>
+              </span>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="ms-navbar">
+
+            <ul class="navbar-nav pull-left">
+                 {% if user.is_authenticated %}
+                <li class="nav-item dropdown active">
+                    <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" >ЗАКАЗЫ</a>
+
+
+                </li>
+                <li class="nav-item dropdown ">
+                    <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" >КЛИЕНТЫ</a>
+                </li>
+                <li class="nav-item dropdown ">
+                    <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" >СОТРУДНИКИ</a>
+                </li>
+                  <li class="nav-item dropdown ">
+                   <div style="width: 200px;"></div>
+                </li>
+                <li class="nav-item  ">
+                    <span style="margin-top: 11px;
+                        font-weight: bold;
+                        font-size: 17px;
+                        margin-right: 10px;">
+                        {{ user.first_name }} {{ user.last_name }}
+                    </span>
+
+                </li>
+                  <li class="nav-item dropdown ">
+                    <a href="#" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" >ЛК</a>
+                </li>
+                   <li class="nav-item dropdown ">
+                    <a href="{% url 'logout' %}" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" >ВЫХОД</a>
+                </li>
+                {% else %}
+                </li>
+                   <li class="nav-item dropdown ">
+                    <a href="{% url 'login' %}" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" >ВХОД В СИСТЕМУ</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+
+    </div>
+    <!-- container -->
+</nav>
